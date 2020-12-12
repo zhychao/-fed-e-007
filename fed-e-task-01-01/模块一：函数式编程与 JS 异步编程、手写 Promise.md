@@ -4,7 +4,7 @@
 
 ### 一、谈谈你是如何理解 JS 异步编程的，EventLoop、消息队列都是做什么的，什么是宏任务，什么是微任务？
 
-
+EventLoop:事件循环，负责监听调用栈和消息队列，消息队列负责取出第一个回调函数，压入到调用栈中！
 
   
 
@@ -30,7 +30,14 @@ setTimeout(function() {
 > 参考代码：
 
 ```
-
+const promise=new Promise((resolve,reject)=>{
+    resolve('hello')
+})
+promise.then(value=>{
+    return value+'lagou'
+}).then(value=>{
+    console.log(value+'I ❤️ U')
+})
 ```
 
 ------
