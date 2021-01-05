@@ -4,7 +4,6 @@
 //     }
 // }
 
-
 var element=[{},{},{}]
 for(var i=0;i<element.length;i++){
  element[i].onclick=(function(i){
