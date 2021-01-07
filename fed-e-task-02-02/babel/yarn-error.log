@@ -1,0 +1,41 @@
+Arguments: 
+  d:\Program Files\nodejs\node.exe D:\Program Files (x86)\Yarn\bin\yarn.js add @babel/node @babel/core @babel/preset --dev
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Pr;gram Files\TortoiseGit\bin;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;D:\锦华work\安装软件;D:\xa;pp\php;d:\Program Files\Git\cmd;";";D:\softWareInstall\nvm;d:\Program Files\nodejs;"D:\softWareInstall\nvm;d:\Program Files\nodejs;";D:\Program Files (x86)\Yarn\bin\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;D:\softWareInstall\Git\cmd;D:\Program Files\TortoiseSVN\bin;D:\Program Files\TortoiseGit\bin;D:\softWareInstall\nvm\v10.19.0\;C:\Users\acper\AppData\Local\Yarn\bin;C:\Program Files\MySQL\MySQL Shell 8.0\bin\;d:\Program Files\Docker Toolbox;d:\Program Files\JetBrains\WebStorm 2020.2\bin;C:\Users\acper\AppData\Roaming\npm;D:\softWareInstall\Microsoft VS Code\bin
+
+Yarn version: 
+  1.13.0
+
+Node version: 
+  10.19.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: https://registry.npm.taobao.org/@babel%2fpreset: Not found
+      at Request.params.callback [as _callback] (D:\Program Files (x86)\Yarn\lib\cli.js:65364:18)
+      at Request.self.callback (D:\Program Files (x86)\Yarn\lib\cli.js:129397:22)
+      at Request.emit (events.js:198:13)
+      at Request.<anonymous> (D:\Program Files (x86)\Yarn\lib\cli.js:130369:10)
+      at Request.emit (events.js:198:13)
+      at IncomingMessage.<anonymous> (D:\Program Files (x86)\Yarn\lib\cli.js:130291:12)
+      at Object.onceWrapper (events.js:286:20)
+      at IncomingMessage.emit (events.js:203:15)
+      at endReadableNT (_stream_readable.js:1145:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "babel",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
