@@ -1,11 +1,10 @@
-import { identity } from "lodash"
 
 class Observer{
     constructor(data){
         this.walk(data)
     }
     walk(data){
-        if(typeof data!=='object'&&!data){
+        if(!data||typeof data!=='object'){
             return
         }
         Object.keys(data).forEach(key=>{

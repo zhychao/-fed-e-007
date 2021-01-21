@@ -8,16 +8,24 @@
 <body>
     <div id="id">
         <h1>{{msg}}</h1>
+        <h1>v-text</h1>
+        <div v-text='msg'></div>
     </div>
-    <script src="./vue.js" ></script>
+    <script src="./complier.js" ></script>
     <script src="./observer.js" ></script>
+    <script src="./vue.js" ></script>
     <script>
         let vm=new Vue({
             el:'id',
             data:{
-                msg:'dadasdasdsdas'
+                msg:'dadasdasdsdas',
+                person:{
+                    name:'ceshi',
+                    age:'20'
+                }
             }
         })
+        console.log(vm.msg)
     </script>
 </body>
 </html>

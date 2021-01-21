@@ -8,6 +8,8 @@ class Vue{
         this._proxyData(this.$data)
         // 调用observer对象，监听数据变化
         new Observer(this.$data)
+        // 4
+        new Compiler(this)
     }
     _proxyData(data){
         Object.keys(data).forEach(key=>{

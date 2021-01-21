@@ -15,6 +15,7 @@
   "homepage": "https://github.com/zhychao/fed-e-007#readme",
   "dependencies": {
     "flow": "^0.2.3",
+    "http-server": "^0.12.3",
     "lodash": "^4.17.20"
   },
   "devDependencies": {
