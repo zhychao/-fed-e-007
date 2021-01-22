@@ -13,11 +13,14 @@ class Observer{
     }
     defineReactive(obj,key,val){
         let that=this
+        let dep=new Dep()
         that.walk(val)
         Object.defineProperty(obj,key,{
             enumerable:true,
             configurable:true,
             get(){
+                // 收集依赖
+                Dep.target&&dep.addSub(Dep.target)
                 return val
             },
             set(newValue){
@@ -26,6 +29,8 @@ class Observer{
                 }
                 val=newValue
                 that.walk(newValue)
+                // 发送通知
+                dep.notify()
             }
         })
     }

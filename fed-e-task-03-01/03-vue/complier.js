@@ -47,7 +47,7 @@ class Compiler{
     }
     // 编译文本节点
     compileText(node){
-        console.log(node)
+        console.log('node',node)
         let reg=/\{\{(.+?)\}\}/
         let value=node.textContent
         if(reg.test(value)){

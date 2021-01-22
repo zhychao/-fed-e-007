@@ -4,6 +4,9 @@ class Vue{
         this.$options=options||{}
         this.$data=options.data||{}
         this.$el=typeof options.el==='string'?document.querySelector(options.el):options.el
+        console.log(typeof options.el)
+        console.log(document.querySelector(options.el))
+        console.log('dadsad',options.el)
         // 把data中的成员转换成getter setter
         this._proxyData(this.$data)
         // 调用observer对象，监听数据变化
