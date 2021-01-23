@@ -53,6 +53,9 @@ class Compiler{
         if(reg.test(value)){
             let key =RegExp.$1.trim()
             node.textContent=value.replace(reg,this.vm[key])
+            new Watcher(this.vm,key,(newValue)=>{
+                node.textContent=newValue
+            })
         }
     }
     // 判断元素属性指令
