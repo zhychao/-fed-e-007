@@ -29,21 +29,31 @@ class Compiler{
             if(this.isDirective(attrName)){
                 attrName=attrName.substr(2)
                 let key=attr.value
-                this.update(node.key,attrName)
+                this.update(node,key,attrName)
             }
         })
     }
     update(node,key,attrName){
         let updateFn=this[attrName+'Updater']
-        updateFn&&updateFn(node,this.vm[key])
+        updateFn&&updateFn.call(this,node,this.vm[key],key)
     }
     // 处理v-text
-    textUpdater(node,value){
+    textUpdater(node,value,key){
         node.textContent=value
+        new Watcher(this.vm,key,(newValue)=>{
+            node.textContent=newValue
+        })
     }
     // 处理v-model
-    modeUpdater(node,value){
+    modelUpdater(node,value,key){
         node.value=value
+        new Watcher(this.vm,key,(newValue)=>{
+            node.value=newValue
+        })
+        // 双向绑定事件
+        node.addEventListener('input',()=>{
+            this.vm[key]=node.value
+        })
     }
     // 编译文本节点
     compileText(node){
